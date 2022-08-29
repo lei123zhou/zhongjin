@@ -1,0 +1,44 @@
+<template>
+  <div class="manangement">
+    <el-menu
+      default-active="1"
+      class="el-menu-vertical-demo"
+      @open="handleOpen"
+      @close="handleClose"
+      background-color="#545c64"
+      text-color="#fff"
+      active-text-color="#ffd04b"
+      router
+    >
+      <el-menu-item index="1" >
+        <i class="el-icon-document"></i>
+        <span slot="title">用户管理</span>
+      </el-menu-item>
+      <el-menu-item index="3" >
+        <i class="el-icon-document"></i>
+        <span slot="title">导航三</span>
+      </el-menu-item>
+    </el-menu>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    handleOpen(key, keyPath) {
+      console.log(key, keyPath);
+    },
+    handleClose(key, keyPath) {
+      console.log(key, keyPath);
+    },
+  },
+};
+</script>
+
+<style lang="less" scoped>
+.manangement {
+  display: flex;
+  height: 100%;
+}
+</style>
